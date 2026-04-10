@@ -603,8 +603,9 @@ def generate_final_recommendation(row, baseline_mean_df, threshold=0.05):
     cluster_id   = row['cluster']
     spend_ratio  = float(row['avg_spend_ratio'])
     ratio_pct    = round(spend_ratio * 100)
-
-    if spend_ratio < 0.5:
+    if spend_ratio == 0:
+        return "لا يوجد بيانات كافية لتحليل إنفاقك. من فضلك أدخل مصاريفك."
+    elif spend_ratio < 0.5:
         level_msg = f"إنفاقك {ratio_pct}% من مرتبك — وضعك المالي ممتاز، كمّل كده"
     elif spend_ratio < 0.75:
         level_msg = f"إنفاقك {ratio_pct}% من مرتبك — وضعك مستقر وكويس"
