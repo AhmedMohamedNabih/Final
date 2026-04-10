@@ -303,19 +303,19 @@ if st.button("🔍 تحليل مصاريفي"):
     # -------------------------------
     # ✅ NEW: Cluster Label
     # -------------------------------
-    cluster_labels = {
-        0: " Saver",
-        1: " Overspender"
-    }
+    # cluster_labels = {
+    #     0: " Saver",
+    #     1: " Overspender"
+    # }
 
-    cluster_name = cluster_labels.get(cluster, f"Cluster {cluster}")
+    # cluster_name = cluster_labels.get(cluster, f"Cluster {cluster}")
 
-    st.markdown("---")
-    st.subheader("تصنيفك المالي")
-    if cluster == 1:
-        st.error(cluster_name)
-    else:
-        st.success(cluster_name)
+    # st.markdown("---")
+    # st.subheader("تصنيفك المالي")
+    # if cluster == 1:
+    #     st.error(cluster_name)
+    # else:
+    #     st.success(cluster_name)
 
     # -------------------------------
     # Recommendation
